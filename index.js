@@ -113,6 +113,14 @@ app.get('/recipes/:id/delete', async function(req,res){
 
 });
 
+app.get('/api/recipies', async function(req,res){
+  // get all the recipes;
+  // send back the recipes as JSON
+  res.json({
+    recipes:[]
+  })
+})
+
 // start server
 app.listen(8080, function () {
   console.log("Express server has started");
